@@ -1,0 +1,146 @@
+/* Start Variables */
+:root {
+--White: hsl(0, 0%, 100%);
+--Grey-100: hsl(214, 17%, 92%);
+--Grey-200: hsl(0, 0%, 81%);
+--Grey-400: hsl(224, 10%, 45%);
+--Grey-500: hsl(217, 19%, 35%);
+--Dark-blue: hsl(219, 29%, 14%);
+--Black: hsl(0, 0%, 7%);
+--Purple-50: hsl(260, 100%, 95%);
+--Purple-300: hsl(264, 82%, 80%);
+--Purple-500: hsl(263, 55%, 52%);
+}
+/* End Variables */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: var(--Grey-100);
+}
+
+.container {
+    display: grid;
+    gap: 30px;
+    padding: 15px;
+}
+@media (min-width:768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px;
+    }
+}
+@media (min-width:992px) {
+    .container {
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+.container .box{
+    background-color: white;
+    border-radius: 13px;
+    padding: 30px;
+    box-shadow: hsl(236deg 19% 35% / 14%) 30px 30px 21px 0px;
+}
+.container .box.Daniel {
+    position: relative;
+    background-color: var(--Purple-500);
+}
+@media (min-width:768px) {
+    .container .box.Daniel {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    }
+}
+.container .box.Daniel > img {
+    position: absolute;
+    right: 30px;
+}
+.container .box.Daniel h3,
+.container .box.Daniel h2 {
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+.container .box.Daniel .intro img {
+    border-color: var(--Purple-300);
+}
+.container .box.Daniel span,
+.container .box.Daniel p {
+    color: var(--Purple-50);
+}
+.container .box.Jonathan {
+    background-color: var(--Grey-500);
+}
+.container .box.Jonathan .intro img {
+    border: none;
+}
+.container .box.Jonathan span,
+.container .box.Jonathan p {
+    color: var(--Grey-100);
+}
+.container .box.Patrick {
+    background-color: var(--Dark-blue);
+    color: var(--White);
+}
+@media (min-width:768px) {
+    .container .box.Patrick {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    }
+}
+.container .box.Patrick .intro img {
+    border-color: var(--Purple-500);
+}
+.container .box.Jeanette h3,
+.container .box.Jeanette h2,
+.container .box.Kira h3,
+.container .box.Kira h2 {
+    color: var(--Grey-500);
+}
+.container .box.Jeanette span,
+.container .box.Jeanette p,
+.container .box.Kira span,
+.container .box.Kira p {
+    color: var(--Grey-400);
+}
+@media (min-width:768px) {
+.container .box.Kira {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+}  
+}
+@media (min-width:992px) {
+    .container .box.Kira {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+}
+.container .box .intro{
+    display: flex;
+    align-items: center;
+}
+.container .box .intro img{
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 60px;
+    height: 60px;
+}
+.container .name h3{
+    margin: 0 0 4px;
+    font-weight: 500;
+}
+.container .name span{
+
+}
+.container .box h2{
+    font-weight: 500;
+}
+.container .box p{
+
+}
